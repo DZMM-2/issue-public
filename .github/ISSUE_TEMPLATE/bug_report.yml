@@ -1,0 +1,149 @@
+name: 🐛 缺陷报告
+description: 报告产品缺陷或异常行为
+title: "[BUG] "
+labels: ["缺陷"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 请简洁准确地描述问题
+        > 提示：好的缺陷报告能帮助我们快速定位和解决问题
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: 产品
+      description: 哪个产品出现了问题？
+      options:
+        - 请选择...
+        - DZMM
+        - NOVELGPT
+        - 酒馆AI
+        - 小说AI
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 影响范围
+      description: 这个问题影响了什么？
+      options:
+        - 请选择...
+        - 核心功能完全不可用
+        - 核心功能部分受影响
+        - 次要功能不可用
+        - 使用体验问题
+        - 视觉/样式问题
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 复现概率
+      description: 问题出现的频率
+      options:
+        - 请选择...
+        - 必现（100%）
+        - 高概率（>80%）
+        - 偶发（20-80%）
+        - 极少（<20%）
+        - 仅出现一次
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 实际表现
+      description: 发生了什么？（事实描述）
+      placeholder: |
+        描述你看到的现象
+        例如：点击按钮后，页面没有任何反应，控制台显示错误
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望表现
+      description: 应该发生什么？
+      placeholder: |
+        描述正常情况应该是怎样的
+        例如：点击按钮后，应该提交表单并跳转到成功页面
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 如何重现这个问题？
+      placeholder: |
+        1. 打开 [具体页面]
+        2. 输入 [具体内容]
+        3. 点击 [具体按钮]
+        4. 观察到 [问题现象]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 严重程度
+      description: 你认为这个问题的严重程度是？
+      options:
+        - 轻微 - 不影响使用
+        - 一般 - 可以规避
+        - 严重 - 影响正常使用
+        - 紧急 - 完全阻塞
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 环境信息（可选）
+      description: 如果和特定环境相关，请提供
+      placeholder: |
+        - 浏览器：Chrome 120
+        - 操作系统：Windows 11
+        - 账号类型：普通用户
+        - 发生时间：2024-01-01 14:30
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 相关证据（可选）
+      description: 截图、录屏、错误日志等
+      placeholder: |
+        可以粘贴图片或拖拽文件到这里
+        如有错误信息，请提供完整的错误内容
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 临时解决方案（可选）
+      description: 有什么方法可以暂时规避这个问题？
+      placeholder: 例如：刷新页面后可以正常使用
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过类似问题，这是一个新问题
+          required: true
+        - label: 我已提供足够的信息用于问题重现
+          required: true

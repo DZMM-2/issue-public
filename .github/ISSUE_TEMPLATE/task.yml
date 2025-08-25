@@ -1,0 +1,141 @@
+name: 📋 工作任务
+description: 创建待办工作任务
+title: "[TASK] "
+labels: ["任务"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 创建工作任务
+        > 清晰的任务定义是高效执行的前提
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 任务类别
+      options:
+        - 请选择...
+        - 功能开发
+        - 缺陷修复
+        - 性能优化
+        - 技术改造
+        - 文档工作
+        - 测试任务
+        - 运维部署
+        - 数据处理
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 任务目标
+      description: 这个任务要达到什么目标？
+      placeholder: |
+        明确的任务目标
+        例如：将首页加载时间从3秒优化到1秒以内
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 工作范围
+      description: 需要做哪些具体工作？
+      placeholder: |
+        - [ ] 分析当前性能瓶颈
+        - [ ] 优化图片加载
+        - [ ] 实施代码分割
+        - [ ] 添加缓存策略
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - 请选择...
+        - P0 - 立即处理
+        - P1 - 今日完成
+        - P2 - 本周完成
+        - P3 - 本月完成
+        - P4 - 待定
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: 预估工作量
+      options:
+        - 请选择...
+        - XS - 2小时内
+        - S - 半天
+        - M - 1天
+        - L - 2-3天
+        - XL - 1周
+        - XXL - 2周+
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完成标准
+      description: 什么样算完成？
+      placeholder: |
+        明确的验收标准
+        例如：
+        - 首页加载时间 < 1秒
+        - 通过性能测试
+        - 代码通过审查
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 期望完成日期（可选）
+      description: YYYY-MM-DD格式
+      placeholder: 2024-12-31
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 前置依赖（可选）
+      description: 开始前需要什么条件？
+      placeholder: |
+        - 需要先完成 #123
+        - 需要设计稿确认
+        - 需要权限申请
+    validations:
+      required: false
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: 风险提示（可选）
+      description: 有什么潜在风险？
+      placeholder: |
+        可能的风险和应对方案
+        例如：可能影响老版本兼容性，需要做好回滚方案
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 任务确认
+      options:
+        - label: 任务目标明确
+          required: true
+        - label: 工作范围清晰
+          required: true
+        - label: 完成标准可验证
+          required: true

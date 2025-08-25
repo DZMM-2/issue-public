@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Telegram社区
+    url: https://t.me/ai_xiaoshuo
+    about: 加入Telegram群组讨论交流
+  - name: 🌐 Web社区
+    url: https://www.dzmm.ai/invite/ukDys3LU
+    about: 访问Web社区平台
+  - name: 🔒 安全问题
+    url: mailto:contact@dzmm.ai
+    about: 私密报告安全漏洞（请勿公开）
+  - name: 📚 使用文档
+    url: https://github.com/DZMM-2/issue-public/wiki
+    about: 查看使用指南和常见问题

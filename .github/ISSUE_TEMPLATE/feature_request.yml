@@ -1,0 +1,133 @@
+name: 💡 改进建议
+description: 提出产品改进或新功能建议
+title: "[FEATURE] "
+labels: ["改进"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 感谢您的建议
+        > 我们重视每一个改进想法，请帮助我们理解您的需求
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: 产品
+      description: 为哪个产品提出建议？
+      options:
+        - 请选择...
+        - DZMM
+        - NOVELGPT
+        - 酒馆AI
+        - 小说AI
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 建议类型
+      description: 这是什么类型的建议？
+      options:
+        - 请选择...
+        - 新增功能
+        - 优化现有功能
+        - 性能改进
+        - 用户体验改进
+        - 流程优化
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 当前痛点
+      description: 您遇到了什么问题或不便？
+      placeholder: |
+        描述当前的问题或不便之处
+        例如：每次导出数据只能一条一条操作，非常耗时
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议方案
+      description: 您建议如何解决？
+      placeholder: |
+        描述您的解决方案
+        例如：在列表页面添加批量选择功能，可以一次导出多条数据
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: 价值说明
+      description: 这个改进能带来什么价值？
+      placeholder: |
+        - 提高效率：减少重复操作
+        - 改善体验：操作更直观
+        - 降低成本：节省时间
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 建议优先级
+      description: 您认为这个建议的优先级是？
+      options:
+        - 请选择...
+        - 可选 - 锦上添花
+        - 期望 - 有会更好
+        - 重要 - 确实需要
+        - 必须 - 迫切需要
+    validations:
+      required: true
+
+  - type: dropdown
+    id: users
+    attributes:
+      label: 影响用户
+      description: 大概会影响多少用户？
+      options:
+        - 请选择...
+        - 个人需求
+        - 小部分用户（<10%）
+        - 部分用户（10-50%）
+        - 多数用户（>50%）
+        - 所有用户
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案（可选）
+      description: 目前您是如何解决这个问题的？
+      placeholder: 描述当前的替代方案或变通方法
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考案例（可选）
+      description: 有其他产品实现了类似功能吗？
+      placeholder: 可以提供产品名称、链接或截图
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过类似建议
+          required: true
+        - label: 这个建议符合产品方向
+          required: true
