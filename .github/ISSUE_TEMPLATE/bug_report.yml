@@ -1,7 +1,7 @@
 name: 🐛 缺陷报告
 description: 报告产品缺陷或异常行为
 title: "[BUG] "
-labels: ["缺陷"]
+labels: ["缺陷", "待处理"]
 assignees: []
 
 body:

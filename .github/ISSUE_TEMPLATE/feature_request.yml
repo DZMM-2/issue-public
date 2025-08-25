@@ -1,7 +1,7 @@
 name: 💡 改进建议
 description: 提出产品改进或新功能建议
 title: "[FEATURE] "
-labels: ["改进"]
+labels: ["改进", "待处理"]
 assignees: []
 
 body:

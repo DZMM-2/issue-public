@@ -1,7 +1,7 @@
 name: 📋 工作任务
 description: 创建待办工作任务
 title: "[TASK] "
-labels: ["任务"]
+labels: ["任务", "待处理"]
 assignees: []
 
 body:
